@@ -1,0 +1,22 @@
+@startuml Mark Six Number Generator
+actor : User: as Person1
+
+package "Mark_Six_Number_Generator" {
+package "Inputs" {
+[AskForPreferredNumbers]
+[AskForNumberOfSets]
+}
+
+package "Generate_Random_Numbers" {
+[GenerateRandomNumbers]
+}
+
+package "Write_Files" {
+[WriteFiles]
+}
+}
+
+Person1 --> Mark_Six_Number_Generator: "Activates"
+Inputs --> Generate_Random_Numbers: "Sends Inputs"
+Generate_Random_Numbers --> Write_Files: "Print Results"
+@enduml
